@@ -1,20 +1,15 @@
 'use client'
 
-import { use } from 'react'
+import { useParams } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
-import { getServiceBySlug, servicesData } from '@/lib/servicesData'
+import { getServiceBySlug } from '@/lib/servicesData'
 
-export function generateStaticParams() {
-  return servicesData.map((service) => ({
-    slug: service.slug,
-  }))
-}
-
-export default function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params)
+export default function ServicePage() {
+  const params = useParams()
+  const slug = params.slug as string
   const service = getServiceBySlug(slug)
 
   if (!service) {
