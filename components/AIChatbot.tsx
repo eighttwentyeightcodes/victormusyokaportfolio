@@ -317,18 +317,18 @@ export default function AIChatbot() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsOpen(true)}
-            className="fixed bottom-6 left-6 z-50 bg-gradient-to-r from-secondary to-accent text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 group"
+            className="fixed bottom-4 left-4 md:bottom-6 md:left-6 z-50 bg-gradient-to-r from-secondary to-accent text-white p-3 md:p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 group"
             aria-label="Open AI Chat"
           >
-            <MessageSquare size={28} className="group-hover:rotate-12 transition-transform" />
+            <MessageSquare size={24} className="md:w-7 md:h-7 group-hover:rotate-12 transition-transform" />
             
             {/* Notification badge */}
             <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full animate-pulse">
               1
             </span>
             
-            {/* Tooltip */}
-            <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            {/* Tooltip - Hidden on mobile */}
+            <div className="hidden md:block absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
               Chat with AI Assistant
               <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full border-8 border-transparent border-r-gray-900"></div>
             </div>
@@ -343,7 +343,7 @@ export default function AIChatbot() {
             initial={{ opacity: 0, y: 100, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 100, scale: 0.8 }}
-            className="fixed bottom-6 left-6 z-50 w-96 h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+            className="fixed bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-auto z-50 w-auto md:w-96 h-[500px] md:h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-secondary to-accent text-white p-4 flex items-center justify-between">
