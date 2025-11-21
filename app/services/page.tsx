@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { servicesData } from '@/lib/servicesData'
+import DiscoveryCallButton from '@/components/DiscoveryCallButton'
 
 export default function ServicesPage() {
   const services = servicesData
@@ -104,13 +105,14 @@ export default function ServicesPage() {
             <p className="text-xl text-white/90 mb-8">
               Let's discuss how my services can help you achieve your digital marketing goals and drive measurable results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/contact" className="btn-accent">
                 Book a Consultation
               </a>
               <a href="/case-studies" className="btn-outline text-white border-white hover:bg-white hover:text-primary">
                 View Case Studies
               </a>
+              <DiscoveryCallButton size="md" />
             </div>
           </motion.div>
         </div>

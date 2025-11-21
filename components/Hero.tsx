@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, TrendingUp, Target, Award } from 'lucide-react'
 import TechBackground from './TechBackground'
 import { useEffect, useState } from 'react'
+import DiscoveryCallButton from './DiscoveryCallButton'
 
 export default function Hero() {
   const stats = [
@@ -88,6 +89,7 @@ export default function Hero() {
               View My Work
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </a>
+            <DiscoveryCallButton size="md" />
           </motion.div>
 
           {/* Stats */}

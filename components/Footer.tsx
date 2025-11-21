@@ -3,6 +3,7 @@
 import { Mail, Phone, MapPin, Linkedin, Github, Instagram } from 'lucide-react'
 import Link from 'next/link'
 import { servicesData } from '@/lib/servicesData'
+import DiscoveryCallButton from './DiscoveryCallButton'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -96,14 +97,14 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social Links */}
+        {/* Social Links and Call To Action */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm">
               © {currentYear} Victor Musyoka. All rights reserved.
             </p>
             
-            <div className="flex gap-4">
+            <div className="flex items-center gap-4">
               <a href="http://linkedin.com/in/victor-musyoka" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors">
                 <Linkedin size={20} />
               </a>
@@ -113,6 +114,7 @@ export default function Footer() {
               <a href="https://www.instagram.com/fmdafrica?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors">
                 <Instagram size={20} />
               </a>
+              <DiscoveryCallButton size="sm" className="ml-2" />
             </div>
           </div>
         </div>
