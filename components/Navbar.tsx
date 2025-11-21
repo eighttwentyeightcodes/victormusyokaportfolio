@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { servicesData } from '@/lib/servicesData'
 import { navigationData } from '@/lib/navData'
 import Link from 'next/link'
-import DiscoveryCallButton from './DiscoveryCallButton'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -189,24 +188,15 @@ export default function Navbar() {
                 </motion.a>
               )
             })}
-            <div className="flex items-center gap-3">
-              <motion.a
-                href="/contact"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
-                className="btn-primary"
-              >
-                Contact Me
-              </motion.a>
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
-              >
-                <DiscoveryCallButton size="md" />
-              </motion.div>
-            </div>
+            <motion.a
+              href="/contact"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className="btn-primary"
+            >
+              Contact Me
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}

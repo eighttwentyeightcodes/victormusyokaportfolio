@@ -89,7 +89,7 @@ export default function Hero() {
               View My Work
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <DiscoveryCallButton size="md" />
+            <DiscoveryCallButton size="md" className="btn-accent inline-flex items-center gap-2" />
           </motion.div>
 
           {/* Stats */}
