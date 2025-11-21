@@ -1,6 +1,12 @@
 export interface BlogPost {
   slug: string
   title: string
+  /** Optional SEO title override */
+  metaTitle?: string
+  /** Optional SEO description override */
+  metaDescription?: string
+  /** Optional visible subtitle rendered under H1 */
+  subtitle?: string
   excerpt: string
   content: string
   category: string

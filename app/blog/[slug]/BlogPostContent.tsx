@@ -40,6 +40,11 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-heading">
               {post.title}
             </h1>
+            {post.subtitle && (
+              <p className="text-xl md:text-2xl text-white/90 mb-6">
+                {post.subtitle}
+              </p>
+            )}
 
             <div className="flex flex-wrap items-center gap-6 text-white/90">
               <div className="flex items-center gap-2">
