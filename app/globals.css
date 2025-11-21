@@ -32,10 +32,10 @@
   }
   
   .section-title {
-    @apply text-4xl md:text-5xl font-bold mb-6 text-primary font-heading;
+    @apply text-3xl md:text-5xl font-bold mb-6 text-primary font-heading;
   }
   
   .stat-number {
-    @apply text-5xl md:text-6xl font-bold text-secondary font-display;
+    @apply text-4xl md:text-6xl font-bold text-secondary font-display;
   }
 }
