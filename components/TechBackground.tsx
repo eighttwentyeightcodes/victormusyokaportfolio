@@ -96,12 +96,12 @@ export default function TechBackground() {
     <>
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 pointer-events-none opacity-60"
+        className="hidden md:block absolute inset-0 pointer-events-none opacity-60"
       />
       
       {/* Animated geometric shapes */}
       <motion.div
-        className="absolute top-20 right-10 w-32 h-32 border-2 border-accent/30 rounded-lg"
+        className="hidden md:block absolute top-20 right-10 w-32 h-32 border-2 border-accent/30 rounded-lg"
         animate={{
           rotate: 360,
           scale: [1, 1.2, 1],
@@ -114,7 +114,7 @@ export default function TechBackground() {
       />
       
       <motion.div
-        className="absolute bottom-32 left-16 w-24 h-24 border-2 border-accent/20"
+        className="hidden md:block absolute bottom-32 left-16 w-24 h-24 border-2 border-accent/20"
         animate={{
           rotate: -360,
           y: [-10, 10, -10],
@@ -127,7 +127,7 @@ export default function TechBackground() {
       />
       
       <motion.div
-        className="absolute top-1/3 left-1/4 w-16 h-16 bg-accent/10 rounded-full"
+        className="hidden md:block absolute top-1/3 left-1/4 w-16 h-16 bg-accent/10 rounded-full"
         animate={{
           scale: [1, 1.5, 1],
           opacity: [0.3, 0.6, 0.3],
@@ -140,7 +140,7 @@ export default function TechBackground() {
       />
 
       {/* Grid overlay */}
-      <div className="absolute inset-0 opacity-5" style={{
+      <div className="hidden md:block absolute inset-0 opacity-5" style={{
         backgroundImage: `
           linear-gradient(to right, #00D1C1 1px, transparent 1px),
           linear-gradient(to bottom, #00D1C1 1px, transparent 1px)

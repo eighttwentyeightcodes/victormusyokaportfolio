@@ -24,8 +24,11 @@ export default function WhatsAppButton() {
     >
       <WhatsAppIcon size={24} className="md:w-7 md:h-7 group-hover:rotate-12 transition-transform" />
       
-      {/* Pulse animation */}
-      <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-75"></span>
+      {/* Pulse animation (hidden on mobile to improve scroll perf) */}
+      <span
+        className="hidden md:block absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-75 pointer-events-none"
+        aria-hidden="true"
+      />
       
       {/* Tooltip - Hidden on mobile */}
       <div className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">

@@ -39,7 +39,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-3"
           >
-            <div className="w-12 h-12 rounded-lg overflow-hidden border-2 border-secondary/30">
+            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary/30">
               <img 
                 src="/IMG_0399.jpeg" 
                 alt="Victor Musyoka" 

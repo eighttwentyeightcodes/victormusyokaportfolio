@@ -1,6 +1,8 @@
 'use client'
 
 import { Mail, Phone, MapPin, Linkedin, Github, Instagram } from 'lucide-react'
+import Link from 'next/link'
+import { servicesData } from '@/lib/servicesData'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -32,7 +34,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-lg overflow-hidden border-2 border-white/30">
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white/30">
                 <img 
                   src="/IMG_0399.jpeg" 
                   alt="Victor Musyoka" 
@@ -83,9 +85,11 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 font-heading">Services</h4>
             <ul className="space-y-2">
-              {footerLinks.services.map((service) => (
-                <li key={service} className="text-white/70">
-                  {service}
+              {servicesData.map((service) => (
+                <li key={service.slug}>
+                  <Link href={`/services/${service.slug}`} className="text-white/70 hover:text-accent transition-colors">
+                    {service.title}
+                  </Link>
                 </li>
               ))}
             </ul>
