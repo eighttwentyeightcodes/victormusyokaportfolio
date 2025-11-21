@@ -1,11 +1,21 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Target, Search, Users, Megaphone, Code, BarChart3, TrendingUp } from 'lucide-react'
 import { Service } from '@/lib/servicesData'
 
-export default function ServiceContent({ service }: { service: Service }) {
-  const Icon = service.icon
+const iconMap = {
+  'digital-marketing-strategy': Target,
+  'seo-ai-search-optimization': Search,
+  'social-media-management': Users,
+  'paid-media-advertising': Megaphone,
+  'web-design-development': Code,
+  'data-analytics-reporting': BarChart3,
+  'brand-strategy-consulting': TrendingUp,
+}
+
+export default function ServiceContent({ service }: { service: Omit<Service, 'icon'> & { slug: string } }) {
+  const Icon = iconMap[service.slug as keyof typeof iconMap]
 
   return (
     <>
