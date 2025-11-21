@@ -41,7 +41,7 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
               {post.title}
             </h1>
             {post.subtitle && (
-              <p className="text-xl md:text-2xl text-white/90 mb-6">
+              <p className="text-xl md:text-2xl text-accent mb-6">
                 {post.subtitle}
               </p>
             )}
