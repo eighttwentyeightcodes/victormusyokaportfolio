@@ -1,18 +1,18 @@
-'use client'
-
-import { useParams } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import { motion } from 'framer-motion'
 import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react'
-import { getBlogPostBySlug } from '@/lib/blogData'
+import { getBlogPostBySlug, blogPosts } from '@/lib/blogData'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 
-export default function BlogPostPage() {
-  const params = useParams()
-  const slug = params.slug as string
-  const post = getBlogPostBySlug(slug)
+export function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }))
+}
+
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = getBlogPostBySlug(params.slug)
 
   if (!post) {
     return (

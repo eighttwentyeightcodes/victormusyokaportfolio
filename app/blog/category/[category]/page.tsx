@@ -1,18 +1,18 @@
-'use client'
-
-import { useParams } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import { motion } from 'framer-motion'
 import { Calendar, Clock, ArrowRight } from 'lucide-react'
 import { getBlogPostsByCategory, categories } from '@/lib/blogData'
 import Link from 'next/link'
 
-export default function CategoryPage() {
-  const params = useParams()
-  const categorySlug = params.category as string
-  const posts = getBlogPostsByCategory(categorySlug)
-  const category = categories.find(c => c.slug === categorySlug)
+export function generateStaticParams() {
+  return categories.map((category) => ({
+    category: category.slug,
+  }))
+}
+
+export default function CategoryPage({ params }: { params: { category: string } }) {
+  const posts = getBlogPostsByCategory(params.category)
+  const category = categories.find(c => c.slug === params.category)
 
   if (!category) {
     return (
