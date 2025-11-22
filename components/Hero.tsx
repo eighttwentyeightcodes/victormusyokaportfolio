@@ -5,7 +5,6 @@ import { ArrowRight, TrendingUp, Target, Award } from 'lucide-react'
 import TechBackground from './TechBackground'
 import { useEffect, useState } from 'react'
 import DiscoveryCallButton from './DiscoveryCallButton'
-import TypingEffect from './TypingEffect'
 
 export default function Hero() {
   const stats = [
@@ -43,51 +42,35 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-heading"
           >
-            <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
-              <motion.span
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="font-serif italic text-gradient-animate"
-              >
-                Digital
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 200 }}
-                className="font-script text-6xl md:text-8xl text-shimmer"
-              >
-                Marketing
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-                className="font-heading text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary animate-glow-pulse"
-              >
-                Analyst
-              </motion.span>
-            </div>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">
+              Digital Marketing Analyst
+            </span>
           </motion.h1>
 
           {/* Subheadline */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
-            <div className="text-center">
-              <TypingEffect 
-                text="I am a Digital Marketing Analyst helping brands grow through SEO, AI search optimization, data analytics, conversion-driven web design, paid media, and strategic insights."
-                speed={40}
-                delay={1200}
-                className="text-white/90"
-                cursorClassName="bg-secondary"
-              />
+            <div className="flex flex-wrap items-center justify-center gap-x-2">
+              <span>I am a</span>
+              <span className="inline-block relative overflow-hidden">
+                <motion.span
+                  key={roleIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-secondary font-semibold font-display inline-block"
+                >
+                  {roles[roleIndex]}
+                </motion.span>
+              </span>
+              <span>helping brands grow through SEO, AI search optimization, data analytics, conversion-driven web design, paid media, and strategic insights.</span>
             </div>
           </motion.div>
 

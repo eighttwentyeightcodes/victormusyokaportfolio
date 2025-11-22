@@ -56,9 +56,6 @@ const config: Config = {
         sans: ['Inter', 'sans-serif'],
         heading: ['Poppins', 'sans-serif'],
         display: ['Space Grotesk', 'monospace'],
-        serif: ['Playfair Display', 'serif'],
-        script: ['Dancing Script', 'cursive'],
-        signature: ['Great Vibes', 'cursive'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',
@@ -67,10 +64,6 @@ const config: Config = {
         'scale-in': 'scaleIn 0.5s ease-out',
         'float': 'float 3s ease-in-out infinite',
         'count-up': 'countUp 2s ease-out',
-        'text-reveal': 'textReveal 1.5s ease-out forwards',
-        'letter-pop': 'letterPop 0.5s ease-out forwards',
-        'glow-pulse': 'glowPulse 2s ease-in-out infinite',
-        'bounce-in': 'bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
       },
       keyframes: {
         fadeIn: {
@@ -96,25 +89,6 @@ const config: Config = {
         countUp: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        textReveal: {
-          '0%': { opacity: '0', transform: 'translateY(30px) scale(0.9)' },
-          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
-        },
-        letterPop: {
-          '0%': { opacity: '0', transform: 'scale(0) rotate(-10deg)' },
-          '50%': { transform: 'scale(1.2) rotate(5deg)' },
-          '100%': { opacity: '1', transform: 'scale(1) rotate(0deg)' },
-        },
-        glowPulse: {
-          '0%, 100%': { textShadow: '0 0 20px rgba(0, 209, 193, 0.5), 0 0 40px rgba(16, 185, 129, 0.3)' },
-          '50%': { textShadow: '0 0 30px rgba(0, 209, 193, 0.8), 0 0 60px rgba(16, 185, 129, 0.5)' },
-        },
-        bounceIn: {
-          '0%': { opacity: '0', transform: 'scale(0.3)' },
-          '50%': { transform: 'scale(1.05)' },
-          '70%': { transform: 'scale(0.9)' },
-          '100%': { opacity: '1', transform: 'scale(1)' },
         },
       },
     },
