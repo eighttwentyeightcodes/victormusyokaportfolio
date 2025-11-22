@@ -5,6 +5,7 @@ import { ArrowRight, TrendingUp, Target, Award } from 'lucide-react'
 import TechBackground from './TechBackground'
 import { useEffect, useState } from 'react'
 import DiscoveryCallButton from './DiscoveryCallButton'
+import TypingEffect from './TypingEffect'
 
 export default function Hero() {
   const stats = [
@@ -76,24 +77,17 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 1 }}
             className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
-            <div className="flex flex-wrap items-center justify-center gap-x-2">
-              <span>I am a</span>
-              <span className="inline-block relative overflow-hidden">
-                <motion.span
-                  key={roleIndex}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
-                  className="text-secondary font-semibold font-display inline-block"
-                >
-                  {roles[roleIndex]}
-                </motion.span>
-              </span>
-              <span>helping brands grow through SEO, AI search optimization, data analytics, conversion-driven web design, paid media, and strategic insights.</span>
+            <div className="text-center">
+              <TypingEffect 
+                text="I am a Digital Marketing Analyst helping brands grow through SEO, AI search optimization, data analytics, conversion-driven web design, paid media, and strategic insights."
+                speed={40}
+                delay={1200}
+                className="text-white/90"
+                cursorClassName="bg-secondary"
+              />
             </div>
           </motion.div>
 
