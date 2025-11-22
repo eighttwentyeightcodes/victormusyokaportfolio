@@ -51,7 +51,7 @@ export default function Navbar() {
                 Victor Musyoka
               </span>
               <span className={`text-xs ${isScrolled ? 'text-textSecondary' : 'text-white/80'}`}>
-                Digital Marketing Specialist and Data Scientist
+                Digital Marketing Analyst
               </span>
             </div>
           </motion.a>

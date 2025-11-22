@@ -100,7 +100,7 @@ export default function AboutPage() {
               >
                 <h2 className="section-title">Who I Am</h2>
                 <p className="text-lg text-textSecondary leading-relaxed mb-6">
-                  I'm a <strong>Data-driven Digital Marketing Specialist</strong> and <strong>Certified Data Scientist</strong> with over 3 years of experience in Digital strategy, Business Process Automation, Web Development, SEO, AI Search Optimization, Content Creation, Content Marketing, Paid Media, Conversion Optimization and Analytics & Reporting.
+                  I'm a <strong>Digital Marketing Analyst</strong> with over 3 years of experience in Digital strategy, Business Process Automation, Web Development, SEO, AI Search Optimization, Content Creation, Content Marketing, Paid Media, Conversion Optimization and Analytics & Reporting.
                 </p>
                 <p className="text-lg text-textSecondary leading-relaxed mb-6">
                   I have a proven track record of building brand strategy, awareness, visibility, and delivering high ROI through strategic campaigns across social media, web, and AI search engines. My achievements include <strong className="text-secondary">5X ROAS</strong>, <strong className="text-secondary">75% organic traffic increases</strong>, <strong className="text-secondary">50% revenue growth</strong>, and <strong className="text-secondary">3M+ profile views</strong> in just 30 days.

@@ -13,7 +13,7 @@ export default function Hero() {
     { icon: Award, number: '3M+', label: 'Profile Views', color: 'text-secondary' },
   ]
 
-  const roles = ['Digital Marketing Specialist', 'Data Scientist']
+  const roles = ['Digital Marketing Analyst']
   const [roleIndex, setRoleIndex] = useState(0)
 
   useEffect(() => {
@@ -44,9 +44,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-heading"
           >
-            Data-driven Digital Marketing Specialist & <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">
-              Certified Data Scientist
+              Digital Marketing Analyst
             </span>
           </motion.h1>
 

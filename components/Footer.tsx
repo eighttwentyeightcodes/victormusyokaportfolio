@@ -44,7 +44,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold font-heading">Victor Musyoka</h3>
-                <p className="text-white/70 text-sm">Digital Marketing Specialist and Data Scientist</p>
+                <p className="text-white/70 text-sm">Digital Marketing Analyst</p>
               </div>
             </div>
             <p className="text-white/80 mb-6 leading-relaxed">

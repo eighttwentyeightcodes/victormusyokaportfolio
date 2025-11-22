@@ -22,7 +22,7 @@ export default function ResumePage() {
               My <span className="text-accent">Resume</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-              Data-driven Digital Marketing Specialist & Certified Data Scientist with over 3 years of experience delivering high ROI through strategic campaigns.
+              Digital Marketing Analyst with over 3 years of experience delivering high ROI through strategic campaigns.
             </p>
             <a href="/victor-musyoka-cv.pdf" download className="btn-accent inline-flex items-center gap-2">
               <Download size={20} />
